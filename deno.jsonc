@@ -1,6 +1,6 @@
 {
   "name": "@milly/async-signal",
-  "version": "1.0.0-rc",
+  "version": "1.0.0",
   "exports": {
     ".": "./mod.ts",
     "./async-signal": "./async_signal.ts",
