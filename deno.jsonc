@@ -1,11 +1,14 @@
 {
   "name": "@milly/async-signal",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "exports": {
     ".": "./mod.ts",
     "./async-signal": "./async_signal.ts",
     "./signal-error": "./signal_error.ts"
   },
+  "exclude": [
+    ".coverage/"
+  ],
   "publish": {
     "exclude": [
       "*_test.ts",
@@ -13,7 +16,8 @@
     ]
   },
   "tasks": {
-    "check": "deno check **/*.ts",
+    "check": "deno check --no-lock **/*.ts",
+    "check:publish": "deno publish --dry-run",
     "test": "deno test",
     "test:doc": "deno task test --doc",
     "test:coverage": "deno task coverage:clean && deno task test:doc --parallel --shuffle --coverage=.coverage",
@@ -27,8 +31,8 @@
   "imports": {
     "@lambdalisue/async": "jsr:@lambdalisue/async@^2.1.1",
     "@milly/async-signal": "./mod.ts",
-    "@std/assert": "jsr:@std/assert@^0.226.0",
-    "@std/async": "jsr:@std/async@^0.224.2",
-    "@std/testing": "jsr:@std/testing@^0.225.1"
+    "@std/assert": "jsr:@std/assert@^1.0.1",
+    "@std/async": "jsr:@std/async@^1.0.1",
+    "@std/testing": "jsr:@std/testing@^0.225.3"
   }
 }

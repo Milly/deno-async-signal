@@ -37,6 +37,9 @@ jobs:
       - name: Check
         run: deno task check
 
+      - name: Check slow types
+        run: deno task check:publish
+
       - name: Test
         run: deno task test:coverage
 
