@@ -6,6 +6,9 @@
     "./async-signal": "./async_signal.ts",
     "./signal-error": "./signal_error.ts"
   },
+  "exclude": [
+    ".coverage/"
+  ],
   "publish": {
     "exclude": [
       "*_test.ts",
