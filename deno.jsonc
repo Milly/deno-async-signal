@@ -16,7 +16,8 @@
     ]
   },
   "tasks": {
-    "check": "deno check **/*.ts",
+    "check": "deno check --no-lock **/*.ts",
+    "check:publish": "deno publish --dry-run",
     "test": "deno test",
     "test:doc": "deno task test --doc",
     "test:coverage": "deno task coverage:clean && deno task test:doc --parallel --shuffle --coverage=.coverage",
